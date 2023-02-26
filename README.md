@@ -18,9 +18,9 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h2>List of Prerequisites</h2>
 
-- Item 1
-- Item 2
-- Item 3
+- Create a Microsoft Azure Virtual Machine
+- Install/Enable Internet Information Services (IIS) in Windows with CGI
+- Install PHP Manager
 - Item 4
 - Item 5
 

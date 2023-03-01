@@ -3,7 +3,8 @@
 </p>
 
 <h1>osTicket - Prerequisites and Installation</h1>
-This tutorial outlines the prerequisites and installation of the open-source help desk ticketing system osTicket. This tutorial of osTicket will be inside of a Windows 10 Microsoft Azure virtual machine. This was designed for beginners to learn how to setup and use osTicket. In a real world environment, there is going to be a little more customiztion depending on the company, so I wouldn't suggest using this tutorial to setup for an actual company, but rather to learn from.<br />
+This tutorial outlines the prerequisites and installation of the open-source help desk ticketing system osTicket. This tutorial of osTicket will be inside of a Windows 10 Microsoft Azure virtual machine. This was designed for beginners to learn how to setup and use osTicket. In a real world environment, there is going to be a little more customiztion depending on the company, so I wouldn't suggest using this tutorial to setup for an actual company, but rather to learn from.
+<br />
 
 <h2>Environments and Technologies Used</h2>
 
@@ -60,7 +61,7 @@ We will first open Remote Desktop Connection from our computer. Make sure to cop
 <img src="https://i.imgur.com/SYY7Imv.png"/>    
 </p>
 
-Make sure you paste the following Google Drive folder link to the browser in the virtual machine to download your installation files:
+When you log on to your virtal machine, you can mark everthing as "No" for your privacy settings. You you then want to the open up a browser and make sure you paste the following Google Drive folder link to download your installation files:
 **[https://drive.google.com/drive/u/1/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6](https://drive.google.com/drive/u/1/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6)**
 
 <p>
@@ -75,93 +76,111 @@ Go to the Control Panel > Programs > and click on "Turn Windows features on or o
 
 Install / Enable IIS in Windows WITH CGI
 
-Just make sure every box that is shown in the image below is checked. To expand the menus out, just click the "+" to expand them out.
+Make sure you turn on Internet Information Services by clicking on the box and then expanding it, and then expanding World Wide Web Services, and then expanding Application Development Features and then click and check CGI.
 
 <p>
-<img src="https://i.imgur.com/7GVFsMN.png"/>
+<img src="https://i.imgur.com/ErqSDhw.png"/>
 </p>
 
 Click OK and wait for everything to install and apply changes.
   
 <p>
-<img src="https://i.imgur.com/U7RUUyI.png"/>
+  
+If you want to test if your web servers are working, you can open a new browser and type in 127.0.0.1 (this is your local host or loopback). You should be able to see the IIS page popup. If not, make sure you actually installed IIS with CGI.
+  
 </p>
-<p>
-Now in a new browser tab, type 127.0.0.1 (this is your loopback IP, if you don't know what that is google it). You then should see the IIS page popup, if you don't, go back and make sure you actually installed IIS with CGI.
-</p>
-<br />
 
 <p>
-<img src="https://i.imgur.com/Xx05Dva.png"/>
+<img src="https://i.imgur.com/fHwppgF.png"/>
 </p>
-<p>
-Now from the drive folder install PHPManagerForIIS_V1.5.0.msi and rewrite_amd64_en-US.msi
-</p>
-<br />
 
 <p>
-<img src="https://i.imgur.com/No25WUQ.png"/>
+We will now download and install PHP Manager for IIS and the rewrite_amd64 files from the Google Drive folder and create a new directory called C:\PHP
 </p>
-<p>
-Create a new directory called C:\PHP
-</p>
-<br />
 
 <p>
-<img src="https://i.imgur.com/IA8113C.png"/>
+<img src="https://i.imgur.com/HhuO7jc.png"/>
 </p>
-<p>
-Now install php-7.3.8-nts-Win32-VC15-x86.zip, move and extract all the contents into C:\PHP
-</p>
-<br />
 
 <p>
-<img src="https://i.imgur.com/PZ3BXsF.png"/>
+Now we will download, install, and extract the php-7.3.8-nts-Win32-VC15-x86.zip file into our new C:\PHP folder
 </p>
-<p>
-Download and install VC_redist.x86.exe.
-
-Download and install mysql-5.5.62-win32.msi
-- Typical Setup ->
-- Launch Configuration Wizard (after install) ->
-- Standard Configuration ->
-- Next ->
-- Password1 (root will be the username, but you don't need to set that up) ->
-- Execute 
-
-</p>
-<br />
 
 <p>
-<img src="https://i.imgur.com/kfk7PPp.png"/>
+<img src="https://i.imgur.com/JQZno4p.png"/>
 </p>
-<p>
-Open IIS as administrator as shown above.
-</p>
-<br />
 
 <p>
-<img src="https://i.imgur.com/QnWyh4t.png"/>
+<img src="https://i.imgur.com/pnybEfG.png"/>
 </p>
-<p>
-After opening IIS Manager as admin, click on the "PHP Manager" icon", hit "Register new PHP version". 
 
-Browse files and find the PHP folder we made earlier and select "php-cgi" and hit open.
+<p>
+Next we will download and install VC_redist.x86.exe.
 </p>
-<br />
+  
+<p>
+<img src="https://i.imgur.com/2i3Ev2W.png"/>
+<p>  
+
+Then we will download and install mysql-5.5.62-win32.msi. For the mysql .msi file, make sure you choose "Typical" installation and make sure the "Launch the MySQL Instance Configuration Wizard" box is checked off before you click "Finish". 
+  
+<p>
+<img src="https://i.imgur.com/6t7eIFm.png"/>
+<p>
+  
+<p>
+<img src="https://i.imgur.com/BGPTVWT.png"/>
+<p>
+
+<p>
+You will now want to choose Standard Configuration, click "Next", Password1 will be your "New root password" (root will be the username, however, you don't need to set that up), click "Execute", and click "Finish".
+<p>
+  
+<p>
+<img src="https://i.imgur.com/QSAB1Cb.png"/>
+<p>
+ 
+<p>
+<img src="https://i.imgur.com/j7V5VVJ.png"/>
+<p> 
+
+<p>
+<img src="https://i.imgur.com/nmxzVpB.png"/>
+<p>  
+  
+<p>
+<img src="https://i.imgur.com/3OT8IWD.png"/>
+<p>  
+   
+We will go to the Start menu and search for IIS and open it as an administrator and click on the "PHP Manager" icon" and then click on "Register new PHP version", browse to find you PHP folder, and look for your php-cgi file and open it and click "OK".
+  
+<p>
+<img src="https://i.imgur.com/UUx6oss.png"/>
+<p>  
+
+<p>
+<img src="https://i.imgur.com/4neNZh1.png"/>
+<p>     
+  
+<p>
+<img src="https://i.imgur.com/fs0E8LF.png"/>
+<p>    
+  
+<p>
+<img src="https://i.imgur.com/T9h1Ifn.png"/>
+<p> 
+
+Make sure you reload IIS by clicking on your local host server "VM-osTicket" and clicking "Restart" under Manage Server.
 
 <p>
 <img src="https://i.imgur.com/7nygYZ7.png"/>
 </p>
-<p>
-Restart the IIS server as per the image above.
-</p>
-<br />
 
 <p>
 <img src="https://i.imgur.com/VCrGYgY.png"/>
 </p>
 <p>
+  
 Now open two separate file explorer windows and on one navigate to the downloads folder and click on osTicket-v1.15.8, and on the other window open up your C:/ drive.
 </p>
 <br />

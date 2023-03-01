@@ -60,36 +60,29 @@ We will first open Remote Desktop Connection from our computer. Make sure to cop
 <img src="https://i.imgur.com/SYY7Imv.png"/>    
 </p>
 
-
-
-Make sure you paste the following Google Drive folder link to the browser in the virtual machine:
-https://drive.google.com/drive/u/1/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6
+Make sure you paste the following Google Drive folder link to the browser in the virtual machine to download your installation files:
+**[https://drive.google.com/drive/u/1/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6](https://drive.google.com/drive/u/1/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6)**
 
 <p>
-<img src="https://i.imgur.com/55R6cCS.png"/>
+<img src="https://i.imgur.com/T7bTeff.png"/>
 </p>
-<br />
+
+Go to the Control Panel > Programs > and click on "Turn Windows features on or off" 
 
 <p>
-<img src="https://i.imgur.com/mpO8frk.png"/>
+<img src="https://i.imgur.com/IoMFNcx.png"/>
 </p>
-<p>
-Go to the Programs section in Control Panel and click on "Turn Windows features on or off".
-</p>
-<br />
+
+Install / Enable IIS in Windows WITH CGI
+
+Just make sure every box that is shown in the image below is checked. To expand the menus out, just click the "+" to expand them out.
 
 <p>
 <img src="https://i.imgur.com/7GVFsMN.png"/>
 </p>
-<p>
-Install / Enable IIS in Windows WITH CGI
 
-Just make sure every box that is shown in the image above is checked, you can hit the little "+" to expand menus out.
-
-Hit OK and wait for everything to install and apply changes.
-</p>
-<br />
-
+Click OK and wait for everything to install and apply changes.
+  
 <p>
 <img src="https://i.imgur.com/U7RUUyI.png"/>
 </p>

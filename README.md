@@ -56,9 +56,11 @@ We will first open Remote Desktop Connection from our computer. Make sure to cop
 <img src="https://i.imgur.com/L0O1ZD6.png"/>    
 </p>
 
+<p>
+<img src="https://i.imgur.com/SYY7Imv.png"/>    
+</p>
 
 
-https://i.imgur.com/SYY7Imv.png
 
 Make sure you paste the following Google Drive folder link to the browser in the virtual machine:
 https://drive.google.com/drive/u/1/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6

@@ -49,8 +49,16 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 We will first open Remote Desktop Connection from our computer. Make sure to copy the Public IP address from our Virtual Machine we created in Microsoft Azure and connect with RDP with your credentials. You may get a popup regarding identity verification of the remote computer not being verified, go ahead and click "Yes" to proceed.
 
 <p>
-<img src="https://i.imgur.com/nIsq2Qb.png"/>
+<img src="https://i.imgur.com/Znn2VTZ.png"/>
 </p>
+
+<p>
+<img src="https://i.imgur.com/L0O1ZD6.png"/>    
+</p>
+
+
+
+https://i.imgur.com/SYY7Imv.png
 
 Make sure you paste the following Google Drive folder link to the browser in the virtual machine:
 https://drive.google.com/drive/u/1/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6

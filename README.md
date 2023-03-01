@@ -33,6 +33,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 - Continue setting up osTicket in the browser
 
 <h2>Installation Files Used</h2>
+
 - HeidiSQL
 - mysql
 - osTicket
@@ -47,7 +48,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <img src="https://i.imgur.com/nIsq2Qb.png"/>
 </p>
 <p>
-First we are going want to RDP into our VM (if you are going to use one). Just find the public IP of the VM and connect with RDP.
+We will first open Remote Desktop Connection from our computer. Make sure to copy the Public IP address from our Virtual Machine we created in Microsoft Azure and connect with RDP with your credentials. You may get a popup regarding identity verification of the remote computer not being verified, go ahead and click "Yes" to proceed.
 </p>
 <br />
 

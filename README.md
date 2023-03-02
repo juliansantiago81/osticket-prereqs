@@ -317,4 +317,9 @@ We now need to clean some things up. Go to File Exploer > This PC > Windows (C:)
   
 Enter your credentials when we had set up osTicket installer previously
   
+<p>
+<img src="https://i.imgur.com/YOjrxUF.png"/>
+</p>
+<p>
+  
 Congratulations, you have made it to the end of this part of the tutorial! I will have a post installation setup tutorial link below.

@@ -225,102 +225,65 @@ We are going to enable some additional extensions in IIS. Go back to IIS Manager
 <p>
   
 Locate and enable "php_imap.dll", "php_intl.dll", and "php_opcache.dll". You can enable them each by right-clicking and selecting "Enable".
-</p>tin
+</p>
   
 <p>
-<img src="https://i.imgur.com/k27l39y.png"/>
+<img src="https://i.imgur.com/j9SeRzO.png"/>
 </p>
 <p>
-
+    
 Refresh the osTicket installer page and observe the changes, it should match the picture below.
 <p>
-<img src="https://i.imgur.com/dk6kFAu.png"/>
+<img src="https://i.imgur.com/cKwMQW0.png"/>
 </p>
 <p>
 
+We will now rename the ost-sampleconfig.php to "ost-config.php". From the Windows (C:) drive in file manager go to inetpub > wwwroot > osTicket > include > ost-sampleconfig.php. Right click and rename to ost-config.php
+  
+<p>
+<img src="https://i.imgur.com/sbqqXWF.png"/>
+</p>
+<p>
+ 
+Next, we will assign permissions to the ost-config.php by right clicking and going to properties > Security tab > Advanced > Disable inheritance > Remove all inherited permissions from the object. Click Add > Select a principal > Type Everyone > Check Names > OK > Give everyone Full Control > OK > Apply > OK
+  
+<p>
+<img src="https://i.imgur.com/8SgJcst.png"/>
+</p>
+<p>
+
+<p>
+<img src="https://i.imgur.com/KXsAWoc.png"/>
+</p>
+<p>
+
+We will now continue setting up osTicket installer in the browser. Click on Continue and you can use whatever names, emails, and password you like under "System Settings" and "Admin User" credetnials, just as long as you don't forget. 
+ 
+<p>
+<img src="https://i.imgur.com/Pe1rq24.png"/>
+</p>
+<p>
+
+From the Installation Files, download and install HeidiSQL. > Accept the agreement > Next > Next > Next > Finish > Create a new session > User will be root > Password will be Password1 > Opent to connect to the session. 
+  
+Create a database called “osTicket”
+  
+<p>
+<img src="https://i.imgur.com/RNUKTnc.png"/>
+</p>
+<p>  
+  
+  
 <p>
 <img src=""/>
 </p>
-<p>
-
-<p>
-<img src=""/>
-</p>
-<p>
+<p> 
+ ====================== 
+  <br />
 
 
-<br />
 
-<p>
-<img src="https://i.imgur.com/W67FgEV.png"/>
-</p>
-<p>
 
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/uEMoIah.png"/>
-</p>
-<p>
-In file explorer go to C: -> inetpub-> wwwroot -> osTicket -> include, then locate ost-sampleconfig.php at the bottom.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/T4CBoq4.png"/>
-</p>
-<p>
-Then rename the file form "ost-sampleconfig.php" to "ost-config.php"
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/Xto4OTI.png"/>
-</p>
-<p>
-Then right click on that file got to Properties -> Security -> Disable inheritance -> Remove all
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/KTIJ5J0.png"/>
-</p>
-<p>
-Then click Add -> Select a principal -> In the object box type "Everyone" and check for names -> click OK
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/7Tpm1LY.png"/>
-</p>
-<p>
-Select Full control and hit OK -> click Apply -> OK -> OK
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/9Bf1IuO.png"/>
-</p>
-<p>
-Now go back into the osTicket installer in the browser and click continue.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/3uOvZ8X.png"/>
-</p>
-<p>
-For the name I just did "Helpdesk" and for the email I did "john@helpdesk.com", then I set the Admin User credentials, write these down if you made up your own. 
-
-Now just leave this page be and go onto the next step in this tutorial.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/3d9To5Z.png"/>
-</p>
-<p>
 Download HeidiSQL form the Drive folder, it will download as a word doc and open it, then click the link to download the HeidiSQL Setup. 
 
 Then install it.

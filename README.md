@@ -173,65 +173,89 @@ We will go to the Start menu and search for IIS and open it as an administrator 
 Make sure you reload IIS by clicking on your local host server "VM-osTicket" and clicking "Restart" under Manage Server.
 
 <p>
-<img src="https://i.imgur.com/7nygYZ7.png"/>
+<img src="https://i.imgur.com/uUEWqn8.png"/>
+</p>
+
+We will now download osTicket from our Installation Files Folder, Extract and copy the “upload” folder to c:\inetpub\wwwroot. Within c:\inetpub\wwwroot, rename the “upload” folder to “osTicket”. To do this, you will want to open two separate File Explorer windows. On one, navigate to the Downloads folder and double click the "osTicket-v1.15.8". There, you will find the "upload" folder. On the other window click on Windows (C:) drive, locate the "inetpub" folder and open it.
+
+<p>
+<img src="https://i.imgur.com/A6gWKpP.png"/>
+</p>
+<p>
+
+Once you open the inetpub folder, look for and open the wwwroot file. This is where you'll be dragging the upload file into. Give it a few to finish copying and make sure you rename the file to osTicket.
+
+<p>
+<img src="https://i.imgur.com/POE7Wx1.png"/>
 </p>
 
 <p>
-<img src="https://i.imgur.com/VCrGYgY.png"/>
+<img src="https://i.imgur.com/Gp6BPrD.png"/>
 </p>
-<p>
-  
-Now open two separate file explorer windows and on one navigate to the downloads folder and click on osTicket-v1.15.8, and on the other window open up your C:/ drive.
-</p>
-<br />
 
-<p>
-<img src="https://i.imgur.com/izvuG0n.png"/>
-</p>
-<p>
-In that C:/ window, navigate to "inetpup" -> "wwwroot" and move in the "upload" folder from the osTicket zip and let it finish copying. Then rename the "upload" folder to "osTicket".
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/RxeVUCO.png"/>
-</p>
 <p>
 Restart the IIS server.
 </p>
+
+<p>
+<img src="https://i.imgur.com/uUEWqn8.png"/>
+</p>
+
 <br />
 
-<p>
-<img src="https://i.imgur.com/fm1ZFgU.png"/>
-</p>
-<p>
-Close and reopen IIS manager as admin again, on the left expand the menus osTicket-VM -> Sites -> Default Web Site -> then click on osTicket.
+Exand VM-osTicket > Sites > Default Web Site > Click on osTicket > Click on Browse *:80 (http)
 
-On the right hit Browse *:80 and you should see the osTicket installer open inside of your default browser.
+<p>
+<img src="https://i.imgur.com/3yhWgfD.png"/>
 </p>
+
+You will now see the osTicket Installer in your browser
+
+<p>
+<img src="https://i.imgur.com/B4HD7J7.png"/>
+</p>
+
 <br />
 
-<p>
-<img src="https://i.imgur.com/QqUA0PL.png"/>
-</p>
-<p>
-Go back to IIS Manager, osTicket-VM -> Sites -> Default Web Site -> click osTicket, then click on "Enable or disable an extension".
-</p>
-<br />
+We are going to enable some additional extensions in IIS. Go back to IIS Manager and expand VM-osticket > Sites > Default Web Site > click osTicket > double click on PHP Manager > click "Enable or disable an extension". 
 
 <p>
-<img src="https://i.imgur.com/PTOgAhg.png"/>
+<img src="https://i.imgur.com/WSzZh2h.png"/>
 </p>
 <p>
-Locate "php_imap.dll", "php_intl.dll", and "php_opcache.dll". Enable them all by right-clicking.
+  
+Locate and enable "php_imap.dll", "php_intl.dll", and "php_opcache.dll". You can enable them each by right-clicking and selecting "Enable".
+</p>tin
+  
+<p>
+<img src="https://i.imgur.com/k27l39y.png"/>
 </p>
+<p>
+
+Refresh the osTicket installer page and observe the changes, it should match the picture below.
+<p>
+<img src="https://i.imgur.com/dk6kFAu.png"/>
+</p>
+<p>
+
+<p>
+<img src=""/>
+</p>
+<p>
+
+<p>
+<img src=""/>
+</p>
+<p>
+
+
 <br />
 
 <p>
 <img src="https://i.imgur.com/W67FgEV.png"/>
 </p>
 <p>
-Refresh the osTicket installer page and observe the changes, it should match the picture above.
+
 </p>
 <br />
 

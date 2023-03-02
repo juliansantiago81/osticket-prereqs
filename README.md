@@ -265,83 +265,56 @@ We will now continue setting up osTicket installer in the browser. Click on Cont
 <p>
 
 From the Installation Files, download and install HeidiSQL. > Accept the agreement > Next > Next > Next > Finish > Create a new session > User will be root > Password will be Password1 > Opent to connect to the session. 
-  
-Create a database called “osTicket”
-  
+    
 <p>
 <img src="https://i.imgur.com/RNUKTnc.png"/>
 </p>
 <p>  
-  
-  
+    
 <p>
-<img src=""/>
+<img src="https://i.imgur.com/YT2n6IH.png"/>
 </p>
 <p> 
- ====================== 
-  <br />
-
-
-
-
-Download HeidiSQL form the Drive folder, it will download as a word doc and open it, then click the link to download the HeidiSQL Setup. 
-
-Then install it.
-
-Once it opens, click the green new button in the bottom left of the window, the username should be "root" and the password should be "Password1" if you set them to those earlier in this tutorial, then hit open.
+  
+We now will Create a database called “osTicket”. Right click on Unamed in HeidiSQL > Create New > Database > Name: osTicket > OK > Make sure there are no erros next to line 19 "CREATE DATABASE"  
+  
+<p>
+<img src="https://i.imgur.com/tFwZSg4.png"/>
 </p>
+<p> 
+ 
+Now we can go back to the osTicket installer in the browser and enter our MySQL Database as osTicket and click Install Now  
+
+<p>
+<img src="https://i.imgur.com/3F1Mv98.png"/>
+</p>
+<p>
+ 
+<p>
+<img src="https://i.imgur.com/FBKIJ2r.png"/>
+</p>
+<p>  
+ 
+  
+We now need to clean some things up. Go to File Exploer > This PC > Windows (C:) > inetpub > wwwroot > osTicket > and delete the "setup" folder.
+</p>T
 <br />
 
 <p>
-<img src="https://i.imgur.com/8IMqLza.png"/>
+<img src="https://i.imgur.com/0EyVhyn.png"/>
 </p>
 <p>
-In HeidiSQL, right click Unnamed -> Create new -> Database, name it "osTicket" and click OK
-</p>
-<br />
-
+  
+ Now inside of wwwroot open osTicket > include > we will reset the ost-config.php settings to read-only. Right click and go to Properties > Security Tab > Advanced > Everyone > OK > Apply > OK
+  
+ Now copy and past the following URL in your browser:
+ **[http://localhost/osTicket/scp/login.php](http://localhost/osTicket/scp/login.php)**
+  
 <p>
-<img src="https://i.imgur.com/qmZlp4P.png"/>
-</p>
-<p>
-Going back into the osTicket installer in the browser, put in the username and password for MySQL (should be "root" and "Password1" if you set them to those) and click install.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/hoVuqRf.jpg"/>
-<img src="https://i.imgur.com/I8ZApOx.png"/>
+<img src="https://i.imgur.com/rDcBhRj.png"/>
 </p>
 <p>
-Now that it has installed, open up both of these urls in your VM's browser
-
-- Help desk login page (login with the credentials that you set for the admin user for osTicket): http://localhost/osTicket/scp/login.php
-
-- End Users osTicket URL: http://localhost/osTicket/ 
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/GanOWok.png"/>
-</p>
-<p>
-We are almost ready to go on to the next tutorial, but first we need to clean some things up.
-
-First browse to the C: drive -> inetpub -> wwwroot -> osTicket -> and delete the "setup" folder.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/ZEWbk8x.png"/>
-</p>
-<p>
-Now browse to C: -> inetpub -> wwwroot -> osTicket -> include -> and locate ost-config.php
-
-Then on ost-config.php go to Properties -> Security -> Advanced -> click Everyone -> Edit -> and set the permissions to Read and Read & Execute only -> Apply.
-
-Click OK.
-
-Congratulations, you have made it to the end of this part of the tutorial! Now keep the VM and osTicket open, then move on to the post installation setup tutorial.
-The link to that tutorial is linked below.
-
-- [osTicket: Post-Installation Configuration](https://github.com/jacksonma
+  
+Enter your credentials when we had set up osTicket installer previously
+  
+Congratulations, you have made it to the end of this part of the tutorial! I will have a post installation setup tutorial link below.
